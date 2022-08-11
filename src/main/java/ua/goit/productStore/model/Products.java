@@ -43,12 +43,12 @@ public class Products {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Products products = (Products) o;
-        return Objects.equals(productName, products.productName) && Objects.equals(productPrice, products.productPrice) && Objects.equals(productDiscount, products.productDiscount) && Objects.equals(productQuantity, products.productQuantity) && Objects.equals(allProducts, products.allProducts);
+        return Objects.equals(productName, products.productName) && Objects.equals(productPrice, products.productPrice) && Objects.equals(productDiscount, products.productDiscount) && Objects.equals(productQuantity, products.productQuantity);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(productName, productPrice, productDiscount, productQuantity, allProducts);
+        return Objects.hash(productName, productPrice, productDiscount, productQuantity);
     }
 
     private boolean hasProduct(){
