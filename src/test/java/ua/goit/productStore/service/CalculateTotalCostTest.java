@@ -17,4 +17,5 @@ class CalculateTotalCostTest {
         Double expected = 19.5;
         assertEquals(expected, actual);
     }
+
 }

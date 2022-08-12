@@ -7,19 +7,12 @@ public class Products {
     private final Double productPrice;
     private final Double productDiscount;
     private final Integer productQuantity;
-    private static final List<Products> allProducts = new LinkedList<>();
 
     public Products(String productName, double productPrice, int productQuantity, double productDiscount) {
-
         this.productName = productName;
         this.productPrice = productPrice;
         this.productQuantity = productQuantity;
         this.productDiscount = productDiscount;
-        int count = 0;
-        if (!hasProduct()){
-            count++;
-            allProducts.add(this);
-        }
     }
 
     public String getProductName() {
@@ -43,22 +36,14 @@ public class Products {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Products products = (Products) o;
-        return Objects.equals(productName, products.productName) && Objects.equals(productPrice, products.productPrice) && Objects.equals(productDiscount, products.productDiscount) && Objects.equals(productQuantity, products.productQuantity);
+        return Objects.equals(productName, products.productName)
+                && Objects.equals(productPrice, products.productPrice)
+                && Objects.equals(productDiscount, products.productDiscount)
+                && Objects.equals(productQuantity, products.productQuantity);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(productName, productPrice, productDiscount, productQuantity);
     }
-
-    private boolean hasProduct(){
-        for (Products product : allProducts){
-            if (product.equals(this) && product.hashCode() == this.hashCode()) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-
 }

@@ -7,7 +7,7 @@ public class Client {
         CalculateTotalCost calculateTotalCost = new CalculateTotalCost();
 
         System.out.println(calculateTotalCost.getResult("ABCDABA"));
-        System.out.println(calculateTotalCost.getResult("BD"));
+        System.out.println(calculateTotalCost.getResult("ABCD"));
 
     }
 }
